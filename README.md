@@ -1,34 +1,92 @@
-**Heart Disease Risk Analysis Dashboard using Power BI**
+**📊 Heart Disease Risk Analysis Dashboard using Power BI** 
+
 🏢 Business Problem
-Hospitals and healthcare providers need an efficient way to analyze and predict heart disease risk based on basic patient health metrics (e.g., age, cholesterol, blood pressure).
-Early detection enables proactive healthcare, cost reduction, and better patient outcomes.
+Healthcare organizations face challenges in early detection of heart disease, a condition that remains one of the leading causes of death worldwide.
+Without early identification, patients are at a much higher risk of severe cardiac events, leading to higher healthcare costs and worse patient outcomes.
+
+The challenge was to create a dynamic, insightful dashboard that would:
+Analyze critical patient health metrics
+Identify high-risk individuals
+Provide healthcare professionals with real-time, actionable insights
 
 🎯 Project Objective
-Analyze patient health metrics (age, blood pressure, cholesterol, etc.)
-Identify key factors that correlate with heart disease
-Visualize important patterns and relationships
-Enable dynamic filtering by gender, chest pain type, and age group
-Build an interactive Power BI dashboard for real-time insights
+
+Analyze patient-level data to detect patterns and correlations related to heart disease.
+Identify key risk factors impacting heart disease probability.
+Visualize trends and correlations dynamically with interactive filtering.
+Enable data-driven decision-making for early medical intervention.
 
 🛠️ Tools Used
-Power BI Desktop
-Excel / CSV (for raw data)
-Python (for correlation heatmap generation)
-Canva (for dashboard backgrounds)
 
-🔥 Dashboard Features
-KPI Cards for Cholesterol, BP, MaxHR, Heart Disease Rate
-Clustered Column Charts (Cholesterol and BP by Gender)
-Scatter Plots showing correlation (e.g., Age vs MaxHR)
-Correlation Matrix Heatmap - Python
-Filters (Slicers) for Gender, Age Group, Heart Disease Status
+Power BI Desktop (dashboard building and visualization)
+Python (correlation matrix generation)
+Excel/CSV (data preprocessing and storage)
+Canva (background design for dashboard aesthetics)
+
+📋 Metrics Used in the Dashboard
+
+Metric	Description
+RestingBP	Patient’s resting blood pressure (mm Hg).
+MaxHR	Maximum heart rate achieved during exercise.
+FastingBS	Fasting blood sugar indicator (>120 mg/dl).
+Cholesterol	Serum cholesterol in mg/dl.
+Oldpeak	ST depression induced by exercise relative to rest.
+Chest Pain Type	Type of chest pain: Asymptomatic (ASY), Atypical Angina (ATA), Non-Anginal Pain (NAP), Typical Angina (TA).
+Age	Patient’s age.
+Sex	Gender (Male/Female).
+Heart Disease	Target variable indicating presence (1) or absence (0) of heart disease.
+
+
+🛠️ How I Solved This Problem Using Power BI
+Data Import and Cleaning:
+Loaded heart disease data into Power BI and handled basic cleaning.
+Created custom DAX columns:
+Age Group (20–30, 30–40, 40–50, etc.) for demographic segmentation.
+Heart Disease Probability Label (High / Low) based on Heart Disease presence.
+
+Custom DAX Columns - 
+Age Group
+Heart Disease Probability:
+
+Data Modeling:
+Built relationships and created calculated columns for better analysis flexibility.
+
+Data Exploration:
+Explored summary statistics and distributions.
+Identified potential strong predictors using a correlation matrix (Python-generated).
+
+Dashboard Construction:
+Built KPI Cards to showcase key figures: Average RestingBP, MaxHR, FastingBS, Heart Disease Rate.
+Designed Bar Charts to compare metrics across gender.
+Created Pie and Donut Charts for Age Group and Gender distribution.
+Developed Scatter Plots to showcase correlation between Age, MaxHR, and Heart Disease Probability.
+Added Slicers (Gender, Age Group, Chest Pain Type, Heart Disease Probability) for dynamic filtering.
+
+Professional Aesthetics:
+Designed custom backgrounds (medical-themed light and dark versions).
+Used modern and minimalistic dashboard themes for a clean and professional look.
+
+Final Result:
+Delivered an interactive, dynamic Heart Disease Risk Analysis Dashboard that helps early risk detection and supports better medical decision-making.
+
+📈 Dashboard Findings - 
+Oldpeak shows the strongest positive correlation with heart disease risk.
+MaxHR shows a strong negative correlation — lower MaxHR patients have a higher risk.
+Age moderately correlates with heart disease, with highest risk observed in 50–60 years age group.
+Chest Pain Type Analysis showed Asymptomatic chest pain (ASY) patients have the highest risk.
+Gender Analysis revealed males had slightly higher heart disease cases compared to females.
+Fasting Blood Sugar showed minimal impact compared to other health indicators.
+
+✨ Solution Outcome
+The final Power BI dashboard:
+Identifies high-risk individuals based on critical health metrics.
+Visualizes key relationships like Age vs MaxHR decline, Oldpeak elevation, and chest pain severity.
+Empowers medical professionals with actionable visual insights.
+Enables dynamic filtering across demographics for deeper analysis and storytelling.
 
 📜 Data Source
-Dataset used from Kaggle - Heart Disease Dataset
+Dataset used: Kaggle - Heart Disease Dataset
 
-✨ How to Run the Project
-Download the .pbix file.
-Open it in Power BI Desktop.
-Explore dashboard visuals and use filters to interact with data.
-(Optional) Update the data by connecting to a new CSV.
+📌 Tags
+#PowerBI #DataVisualization #HeartDiseaseAnalysis #HealthcareAnalytics #DataAnalytics #BusinessIntelligence #DAX #DataModeling
 
